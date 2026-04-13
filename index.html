@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Just Physical Gym – It's a Lifestyle</title>
+
+  <!-- Fonts: Oswald (display) + Barlow (body) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Barlow:wght@300;400;500;600&family=Barlow+Condensed:wght@400;600;700&display=swap" rel="stylesheet" />
+
+  <!-- Font Awesome -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" crossorigin="anonymous" />
+
+  <style>
+    @import "css/index.css";    
+  </style>
+</head>
+<body>
+
+  <!-- ============================================
+       NAVIGATION
+  ============================================= -->
+  <nav class="nav" id="mainNav" role="navigation" aria-label="Main navigation">
+
+    <a href="#" class="nav__logo" aria-label="Just Physical Gym – Home">
+      <img
+        src="images/Logos/Just_Physical_Gym_logo.png"
+        alt="Just Physical Gym"
+        width="180" height="40"
+      />
+    </a>
+
+    <ul class="nav__links" role="list">
+      <li><a href="#"        class="nav__link" aria-current="page">Home</a></li>
+      <li><a href="#about"   class="nav__link">About Us</a></li>
+      <li><a href="#gallery" class="nav__link">Gallery</a></li>
+      <li><a href="#success" class="nav__link">Success Stories</a></li>
+      <li><a href="#contact" class="nav__link">Contact Us</a></li>
+    </ul>
+
+    <button
+      class="nav__hamburger"
+      id="hamburger"
+      aria-label="Toggle navigation menu"
+      aria-expanded="false"
+      aria-controls="mobileDrawer"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+
+  </nav>
+
+  <!-- Mobile nav drawer -->
+  <div class="nav__drawer" id="mobileDrawer" role="dialog" aria-label="Navigation menu">
+    <a href="#"        class="nav__drawer-link">Home</a>
+    <a href="#about"   class="nav__drawer-link">About Us</a>
+    <a href="#gallery" class="nav__drawer-link">Gallery</a>
+    <a href="#success" class="nav__drawer-link">Success Stories</a>
+    <a href="#contact" class="nav__drawer-link">Contact Us</a>
+  </div>
+
+
+  <!-- ============================================
+       HERO SECTION
+  ============================================= -->
+  <section class="hero" id="hero" aria-label="Just Physical Gym hero">
+
+    <!-- Peek-and-Flip Background Slider -->
+    <div
+      class="slider"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="Featured gym photography"
+    >
+      <div class="slider__track" id="sliderTrack" aria-live="polite"></div>
+    </div>
+
+    <!-- Accent divider line at 90% split -->
+    <div class="slider__divider" id="sliderDivider" aria-hidden="true"></div>
+
+    <!-- Peek interaction zone (right 10%) -->
+    <div
+      class="peek-zone"
+      id="peekZone"
+      role="button"
+      tabindex="0"
+      aria-label="Advance to next slide"
+    >
+      <div class="peek-zone__hint" aria-hidden="true">
+        <i class="fa-solid fa-chevron-right"></i>
+      </div>
+      <span class="peek-zone__label" aria-hidden="true">Next</span>
+    </div>
+
+    <!-- Hero Copy -->
+    <div class="hero__content">
+
+      <div class="hero__eyebrow" aria-hidden="true">
+        <div class="hero__eyebrow-bar"></div>
+        <span class="hero__eyebrow-text">Johannesburg's Premier Gym</span>
+      </div>
+
+      <h1 class="hero__title">
+        WHY&nbsp;<span class="hero__title-word--accent">TRAIN</span>&nbsp;WITH US?
+      </h1>
+
+      <p class="hero__desc">
+        You already know you need to gym. Besides the expensive equipment that we make available to
+        you for a fraction of a fraction of what they all cost, we pride ourselves in
+        <span class="hero__desc-hl">our community</span>. You don't only build a strong body here,
+        you build <span class="hero__desc-hl">strong connections!</span>
+      </p>
+
+      <a href="#" class="hero__cta" aria-label="Download our gym guide">
+        Download Gym Guide
+        <i class="fa-solid fa-download" aria-hidden="true"></i>
+      </a>
+
+    </div>
+
+    <!-- Slide Indicators -->
+    <div
+      class="indicators"
+      id="indicators"
+      role="tablist"
+      aria-label="Slide navigation"
+    ></div>
+
+  </section><!-- /hero -->
+
+
+  <!-- ============================================
+       PRICING SECTION
+  ============================================= -->
+  <section class="pricing" id="pricing" aria-label="Membership pricing">
+    <div class="pricing__inner">
+
+      <!-- Header -->
+      <header class="pricing__header" id="pricingHeader">
+        <div class="pricing__eyebrow" aria-hidden="true">
+          <div class="pricing__eyebrow-bar"></div>
+          <span class="pricing__eyebrow-text">Membership Options</span>
+        </div>
+        <h1 class="pricing__title">OUR PRICES</h1>
+        <p class="pricing__subtitle">Choose between 11 membership plans tailored for your needs</p>
+      </header>
+
+      <!-- Cards Grid -->
+      <div class="pricing__grid" role="list">
+
+        <!-- ── Card 1: Single / 12 Months (Best Seller) ── -->
+        <article class="pricing-card pricing-card--dark" role="listitem" aria-label="Single Membership, 12 Months, R360 per month">
+
+          <!-- Best Seller Badge -->
+          <div class="pricing-card__badge" aria-label="Best seller, ranked number 1">
+            <!-- 10-point hollow star SVG encircling "1" -->
+            <svg class="pricing-card__badge-star" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <!-- 10-point star path -->
+              <path d="
+                M24 4
+                L26.47 15.07
+                L36.97 9.03
+                L31.77 19.97
+                L43.31 20.97
+                L34.5 28.5
+                L38.97 39.47
+                L28.0 34.47
+                L24 45
+                L20.0 34.47
+                L9.03 39.47
+                L13.5 28.5
+                L4.69 20.97
+                L16.23 19.97
+                L11.03 9.03
+                L21.53 15.07
+                Z
+              " stroke="#1CA3FD" stroke-width="2" stroke-linejoin="round"/>
+              <!-- Number 1 in centre -->
+              <text x="24" y="29" text-anchor="middle" font-family="'Oswald', sans-serif" font-size="13" font-weight="700" fill="#ffffff">1</text>
+            </svg>
+            <span class="pricing-card__badge-text">BEST SELLER</span>
+          </div>
+
+          <div class="pricing-card__body">
+            <i class="fa-solid fa-key pricing-card__icon" aria-hidden="true"></i>
+            <h2 class="pricing-card__name">Single Membership</h2>
+            <p class="pricing-card__length">12 Months</p>
+            <p class="pricing-card__price">R360</p>
+            <p class="pricing-card__per">Per Month</p>
+          </div>
+        </article>
+
+        <!-- ── Card 2: Single / Open Ended ── -->
+        <article class="pricing-card pricing-card--blue" role="listitem" aria-label="Single Membership, Open Ended, R460 per month">
+          <div class="pricing-card__body">
+            <i class="fa-solid fa-key pricing-card__icon" aria-hidden="true"></i>
+            <h2 class="pricing-card__name">Single Membership</h2>
+            <p class="pricing-card__length">Open Ended</p>
+            <p class="pricing-card__price">R460</p>
+            <p class="pricing-card__per">Per Month</p>
+          </div>
+        </article>
+
+        <!-- ── Card 3: Family / 12 Months ── -->
+        <article class="pricing-card pricing-card--white" role="listitem" aria-label="Family Membership, 12 Months, R650 per month">
+          <div class="pricing-card__body">
+            <i class="fa-solid fa-users pricing-card__icon" aria-hidden="true"></i>
+            <h2 class="pricing-card__name">Family Membership</h2>
+            <p class="pricing-card__length">12 Months</p>
+            <p class="pricing-card__price">R650</p>
+            <p class="pricing-card__per">Per Month</p>
+          </div>
+        </article>
+
+        <!-- ── Card 4: Trial / 1 Month ── -->
+        <article class="pricing-card pricing-card--deep" role="listitem" aria-label="Trial Membership, 1 Month, R635 per month">
+          <div class="pricing-card__body">
+            <i class="fa-solid fa-key pricing-card__icon" aria-hidden="true"></i>
+            <h2 class="pricing-card__name">Trial Membership</h2>
+            <p class="pricing-card__length">1 Month</p>
+            <p class="pricing-card__price">R635</p>
+            <p class="pricing-card__per">Per Month</p>
+          </div>
+        </article>
+
+      </div><!-- /grid -->
+
+      <!-- CTA -->
+      <div class="pricing__cta-wrap">
+        <a href="#" class="pricing__cta" aria-label="View full pricing details">
+          View Full Pricing
+          <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+        </a>
+      </div>
+
+    </div><!-- /inner -->
+  </section><!-- /pricing -->
+
+
+  <!-- ============================================
+       JAVASCRIPT
+  ============================================= -->
+  <script src="js/index.js"></script>
+
+</body>
+</html>
