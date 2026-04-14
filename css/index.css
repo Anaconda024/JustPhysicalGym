@@ -52,8 +52,8 @@
     }
 
     .nav__logo img {
-      height: 150px;
-      max-width: 250px;
+      height: 40px;
+      max-width: 200px;
       object-fit: contain;
       display: block;
       /* Logo has black bg — knock it out via mix-blend-mode */
@@ -618,32 +618,26 @@
       background: #000000;
       padding: 80px 5%;
     }
-
     .pricing__inner {
       max-width: 1400px;
       margin: 0 auto;
     }
-
-    /* ── Header ── */
     .pricing__header {
       margin-bottom: 40px;
       opacity: 0;
       transform: translateY(22px);
       transition: opacity 0.7s ease, transform 0.7s ease;
     }
-
     .pricing__header.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
-
     .pricing__eyebrow {
       display: flex;
       align-items: center;
       gap: 12px;
       margin-bottom: 14px;
     }
-
     .pricing__eyebrow-bar {
       width: 36px;
       height: 2px;
@@ -651,7 +645,6 @@
       border-radius: 2px;
       flex-shrink: 0;
     }
-
     .pricing__eyebrow-text {
       font-family: var(--font-body);
       font-size: 11px;
@@ -660,7 +653,6 @@
       text-transform: uppercase;
       color: var(--accent);
     }
-
     .pricing__title {
       font-family: var(--font-display);
       font-size: clamp(32px, 4vw, 48px);
@@ -670,7 +662,6 @@
       line-height: 1.0;
       letter-spacing: 0.02em;
     }
-
     .pricing__subtitle {
       font-family: var(--font-body);
       font-size: clamp(14px, 1.1vw, 16px);
@@ -679,15 +670,11 @@
       margin-top: 10px;
       line-height: 1.5;
     }
-
-    /* ── Cards Grid ── */
     .pricing__grid {
       display: grid;
       grid-template-columns: repeat(4, 1fr);
       gap: 24px;
     }
-
-    /* ── Base Card ── */
     .pricing-card {
       position: relative;
       border-radius: 12px;
@@ -698,13 +685,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
-      /* Rust texture base */
-      background-image: url('../images/backgrounds/rust_background.jpg');
+      background-image: url('images/backgrounds/rust_background.jpg');
       background-size: cover;
       background-position: center;
-
-      /* Scroll-reveal start state */
       opacity: 0;
       transform: translateY(32px);
       transition:
@@ -713,26 +696,19 @@
         box-shadow 0.35s ease,
         scale 0.3s ease;
     }
-
     .pricing-card.is-visible {
       opacity: 1;
       transform: translateY(0);
     }
-
-    /* Staggered delays */
     .pricing-card:nth-child(1) { transition-delay: 0.08s; }
     .pricing-card:nth-child(2) { transition-delay: 0.18s; }
     .pricing-card:nth-child(3) { transition-delay: 0.28s; }
     .pricing-card:nth-child(4) { transition-delay: 0.38s; }
-
-    /* Hover lift */
     .pricing-card:hover {
       box-shadow: 0 28px 60px rgba(0, 0, 0, 0.6);
       scale: 1.03;
       z-index: 2;
     }
-
-    /* ── Colour overlay via pseudo ── */
     .pricing-card::before {
       content: '';
       position: absolute;
@@ -741,26 +717,10 @@
       pointer-events: none;
       z-index: 0;
     }
-
-    /* Card 1 — dark veil only */
     .pricing-card--dark::before  { background: rgba(0, 0, 0, 0.40); }
-
-    /* Card 2 — accent blue */
-    .pricing-card--blue::before  { background-image: 
-        linear-gradient(rgba(28, 163, 253, 0.4), rgba(28, 163, 253, 0.4)), /* The Tint */
-        url('../images/backgrounds/rust_background.jpg');}
-
-    /* Card 3 — white */
-    .pricing-card--white::before { background-image: 
-        linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), /* The Tint */
-        url('../images/backgrounds/rust_background.jpg');}
-
-    /* Card 4 — deep navy */
-    .pricing-card--deep::before  { background-image: 
-        linear-gradient(rgba(17, 97, 151, 0.4), rgba(17, 97, 151, 0.4)), /* The Tint */
-        url('../images/backgrounds/rust_background.jpg');}
-
-    /* ── Card Body ── */
+    .pricing-card--blue::before  { background: rgba(28, 163, 253, 0.85); }
+    .pricing-card--white::before { background: rgba(255, 255, 255, 0.90); }
+    .pricing-card--deep::before  { background: rgba(17, 97, 151, 0.85); }
     .pricing-card__body {
       position: relative;
       z-index: 1;
@@ -769,19 +729,12 @@
       align-items: center;
       width: 100%;
     }
-
-    /* ── Icon ── */
     .pricing-card__icon {
       font-size: 48px;
       color: var(--white);
       line-height: 1;
     }
-
-    .pricing-card__icon--dark {
-      color: #111111;
-    }
-
-    /* ── Name ── */
+    .pricing-card__icon--dark { color: #111111; }
     .pricing-card__name {
       font-family: var(--font-display);
       font-size: 16px;
@@ -792,10 +745,7 @@
       margin-top: 20px;
       line-height: 1.3;
     }
-
     .pricing-card__name--dark { color: #111111; }
-
-    /* ── Length ── */
     .pricing-card__length {
       font-family: var(--font-body);
       font-size: 14px;
@@ -805,10 +755,7 @@
       color: rgba(255, 255, 255, 0.80);
       margin-top: 8px;
     }
-
     .pricing-card__length--dark { color: rgba(17, 17, 17, 0.70); }
-
-    /* ── Price ── */
     .pricing-card__price {
       font-family: var(--font-display);
       font-size: 56px;
@@ -818,10 +765,7 @@
       line-height: 1;
       letter-spacing: -0.02em;
     }
-
     .pricing-card__price--dark { color: #111111; }
-
-    /* ── Per Month ── */
     .pricing-card__per {
       font-family: var(--font-body);
       font-size: 14px;
@@ -831,10 +775,7 @@
       color: rgba(255, 255, 255, 0.75);
       margin-top: 6px;
     }
-
     .pricing-card__per--dark { color: rgba(17, 17, 17, 0.65); }
-
-    /* ── Best Seller Badge ── */
     .pricing-card__badge {
       position: absolute;
       top: 16px;
@@ -844,14 +785,12 @@
       align-items: center;
       gap: 6px;
     }
-
     .pricing-card__badge-star {
       width: 40px;
       height: 40px;
       flex-shrink: 0;
       filter: drop-shadow(0 0 4px rgba(28, 163, 253, 0.5));
     }
-
     .pricing-card__badge-text {
       font-family: var(--font-body);
       font-size: 12px;
@@ -863,14 +802,11 @@
       max-width: 52px;
       text-align: left;
     }
-
-    /* ── CTA ── */
     .pricing__cta-wrap {
       display: flex;
       justify-content: center;
       margin-top: 48px;
     }
-
     .pricing__cta {
       display: inline-flex;
       align-items: center;
@@ -890,7 +826,6 @@
       transition: transform 0.2s ease, filter 0.2s ease, box-shadow 0.2s ease;
       box-shadow: 0 4px 18px rgba(28, 163, 253, 0.22);
     }
-
     .pricing__cta::before {
       content: '';
       position: absolute;
@@ -900,35 +835,258 @@
       transform: skewX(-20deg);
       transition: left 0.5s ease;
     }
-
     .pricing__cta:hover {
       transform: scale(1.03);
       filter: brightness(1.1);
       box-shadow: 0 8px 32px rgba(28, 163, 253, 0.42);
     }
-
     .pricing__cta:hover::before { left: 140%; }
-
     .pricing__cta i { font-size: 13px; }
 
-    /* ── Responsive: Tablet ── */
     @media (max-width: 1024px) {
-      .pricing__grid {
-        grid-template-columns: repeat(2, 1fr);
+      .pricing__grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .pricing { padding: 40px 5%; }
+      .pricing__grid { grid-template-columns: 1fr; }
+      .pricing-card { min-height: 360px; }
+    }
+
+
+    /* ==============================================
+       GALLERY SECTION
+    =============================================== */
+    .gallery {
+      background: #000000;
+      padding: 80px 5% 120px;   /* extra bottom so deck shadow isn't clipped */
+      overflow: hidden;
+    }
+
+    .gallery__inner {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    /* ── Header ── */
+    .gallery__header {
+      text-align: center;
+      margin-bottom: 60px;
+    }
+
+    .gallery__title {
+      font-family: var(--font-display);
+      font-size: clamp(32px, 4.5vw, 48px);
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--white);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+
+    .gallery__subtitle {
+      font-family: var(--font-body);
+      font-size: clamp(14px, 1.1vw, 16px);
+      font-weight: 400;
+      color: rgba(255, 255, 255, 0.70);
+      margin-top: 10px;
+    }
+
+    /* ══════════════════════════════════════════
+       DECK — DESKTOP FANNED LAYOUT
+    ══════════════════════════════════════════ */
+    .deck {
+      position: relative;
+      height: 480px;
+      /* Wide enough to let the rightmost card fully show */
+      margin: 0 auto;
+    }
+
+    /* ── Base card ── */
+    .card {
+      position: absolute;
+      bottom: 0;
+      width: 330px;
+      height: 450px;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55);
+      cursor: pointer;
+      transform-origin: bottom center;
+      will-change: transform;
+      transition: transform 0.35s cubic-bezier(0.34, 1.46, 0.64, 1),
+                  box-shadow 0.35s ease,
+                  z-index 0s;
+    }
+
+    .card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+    }
+
+    /* ── Hover lift ── */
+    .card:hover {
+      box-shadow: 0 24px 56px rgba(0, 0, 0, 0.7);
+      z-index: 100 !important;
+    }
+
+    /*
+      Fan formula:
+        left  = 50% - 338px + (n * 52px)   → evenly spread around centre
+        rotate= -12deg + (n * 2deg)         → -12° … +12°
+        z-index= n + 1                      → right cards on top
+
+      n goes 0 (far-left) → 12 (far-right)
+    */
+
+    /* n = 0 */
+    .card--1  {
+      left: calc(50% - 338px + (0  * 52px));
+      z-index: 1;
+    }
+    /* n = 1 */
+    .card--2  {
+      left: calc(50% - 338px + (1  * 52px));
+      z-index: 2;
+    }
+    /* n = 2 */
+    .card--3  {
+      left: calc(50% - 338px + (2  * 52px));
+      z-index: 3;
+    }
+    /* n = 3 */
+    .card--4  {
+      left: calc(50% - 338px + (3  * 52px));
+      z-index: 4;
+    }
+    /* n = 4 */
+    .card--5  {
+      left: calc(50% - 338px + (4  * 52px));
+      z-index: 5;
+    }
+    /* n = 5 */
+    .card--6  {
+      left: calc(50% - 338px + (5  * 52px));
+      z-index: 6;
+    }
+    /* n = 6 — centre card, no rotation */
+    .card--7  {
+      left: calc(50% - 338px + (6  * 52px));
+      transform: rotate(0deg);
+      z-index: 7;
+    }
+    /* n = 7 */
+    .card--8  {
+      left: calc(50% - 338px + (7  * 52px));
+      z-index: 8;
+    }
+    /* n = 8 */
+    .card--9  {
+      left: calc(50% - 338px + (8  * 52px));
+      z-index: 9;
+    }
+    /* n = 9 */
+    .card--10 {
+      left: calc(50% - 338px + (9  * 52px));
+      z-index: 10;
+    }
+    /* n = 10 */
+    .card--11 {
+      left: calc(50% - 338px + (10 * 52px));
+      z-index: 11;
+    }
+    /* n = 11 */
+    .card--12 {
+      left: calc(50% - 338px + (11 * 52px));
+      z-index: 12;
+    }
+    /* n = 12 — far right, fully visible */
+    .card--13 {
+      left: calc(50% - 338px + (12 * 52px));
+      z-index: 13;
+    }
+
+    /* Hover overrides — lift + straighten */
+    .card--1:hover  { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--2:hover  { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--3:hover  { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--4:hover  { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--5:hover  { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--6:hover  { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--7:hover  { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--8:hover  { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--9:hover  { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--10:hover { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--11:hover { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--12:hover { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+    .card--13:hover { transform: translateY(-38px) scale(1.08) rotate(0deg); }
+
+
+    /* ══════════════════════════════════════════
+       GALLERY — TABLET & MOBILE (≤ 768px)
+       Switch to horizontal scroll-snap strip
+    ══════════════════════════════════════════ */
+    @media (max-width: 768px) {
+      .gallery {
+        padding: 60px 0 60px;
+      }
+
+      .gallery__header {
+        padding: 0 5%;
+        margin-bottom: 40px;
+      }
+
+      /* Turn deck into a horizontal scroller */
+      .deck {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-end;
+        height: auto;
+        overflow-x: auto;
+        overflow-y: visible;
+        scroll-snap-type: x mandatory;
+        -webkit-overflow-scrolling: touch;
+        gap: 16px;
+        padding: 24px 5% 32px;
+        /* Hide scrollbar on Webkit */
+        scrollbar-width: none;
+      }
+
+      .deck::-webkit-scrollbar { display: none; }
+
+      /* Reset absolute positioning + rotation for every card */
+      .card,
+      .card--1, .card--2,  .card--3,  .card--4,
+      .card--5, .card--6,  .card--7,  .card--8,
+      .card--9, .card--10, .card--11, .card--12, .card--13 {
+        position: relative;
+        flex-shrink: 0;
+        left: unset;
+        bottom: unset;
+        width: 300px;
+        height: 405px;
+        transform: none;
+        z-index: 1;
+        scroll-snap-align: center;
+      }
+
+      /* Keep hover scale on mobile-capable touch hover */
+      .card:hover,
+      .card--1:hover, .card--2:hover,  .card--3:hover,  .card--4:hover,
+      .card--5:hover, .card--6:hover,  .card--7:hover,  .card--8:hover,
+      .card--9:hover, .card--10:hover, .card--11:hover, .card--12:hover, .card--13:hover {
+        transform: scale(1.05);
+        z-index: 2;
       }
     }
 
-    /* ── Responsive: Mobile ── */
-    @media (max-width: 768px) {
-      .pricing {
-        padding: 40px 5%;
-      }
-
-      .pricing__grid {
-        grid-template-columns: 1fr;
-      }
-
-      .pricing-card {
-        min-height: 360px;
+    @media (max-width: 480px) {
+      .card,
+      .card--1, .card--2,  .card--3,  .card--4,
+      .card--5, .card--6,  .card--7,  .card--8,
+      .card--9, .card--10, .card--11, .card--12, .card--13 {
+        width: 263px;
+        height: 360px;
       }
     }

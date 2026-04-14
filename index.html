@@ -139,7 +139,6 @@
   <section class="pricing" id="pricing" aria-label="Membership pricing">
     <div class="pricing__inner">
 
-      <!-- Header -->
       <header class="pricing__header" id="pricingHeader">
         <div class="pricing__eyebrow" aria-hidden="true">
           <div class="pricing__eyebrow-bar"></div>
@@ -149,42 +148,16 @@
         <p class="pricing__subtitle">Choose between 11 membership plans tailored for your needs</p>
       </header>
 
-      <!-- Cards Grid -->
       <div class="pricing__grid" role="list">
 
-        <!-- ── Card 1: Single / 12 Months (Best Seller) ── -->
         <article class="pricing-card pricing-card--dark" role="listitem" aria-label="Single Membership, 12 Months, R360 per month">
-
-          <!-- Best Seller Badge -->
           <div class="pricing-card__badge" aria-label="Best seller, ranked number 1">
-            <!-- 10-point hollow star SVG encircling "1" -->
             <svg class="pricing-card__badge-star" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
-              <!-- 10-point star path -->
-              <path d="
-                M24 4
-                L26.47 15.07
-                L36.97 9.03
-                L31.77 19.97
-                L43.31 20.97
-                L34.5 28.5
-                L38.97 39.47
-                L28.0 34.47
-                L24 45
-                L20.0 34.47
-                L9.03 39.47
-                L13.5 28.5
-                L4.69 20.97
-                L16.23 19.97
-                L11.03 9.03
-                L21.53 15.07
-                Z
-              " stroke="#1CA3FD" stroke-width="2" stroke-linejoin="round"/>
-              <!-- Number 1 in centre -->
+              <path d="M24 4 L26.47 15.07 L36.97 9.03 L31.77 19.97 L43.31 20.97 L34.5 28.5 L38.97 39.47 L28.0 34.47 L24 45 L20.0 34.47 L9.03 39.47 L13.5 28.5 L4.69 20.97 L16.23 19.97 L11.03 9.03 L21.53 15.07 Z" stroke="#1CA3FD" stroke-width="2" stroke-linejoin="round"/>
               <text x="24" y="29" text-anchor="middle" font-family="'Oswald', sans-serif" font-size="13" font-weight="700" fill="#ffffff">1</text>
             </svg>
             <span class="pricing-card__badge-text">BEST SELLER</span>
           </div>
-
           <div class="pricing-card__body">
             <i class="fa-solid fa-key pricing-card__icon" aria-hidden="true"></i>
             <h2 class="pricing-card__name">Single Membership</h2>
@@ -194,7 +167,6 @@
           </div>
         </article>
 
-        <!-- ── Card 2: Single / Open Ended ── -->
         <article class="pricing-card pricing-card--blue" role="listitem" aria-label="Single Membership, Open Ended, R460 per month">
           <div class="pricing-card__body">
             <i class="fa-solid fa-key pricing-card__icon" aria-hidden="true"></i>
@@ -205,18 +177,16 @@
           </div>
         </article>
 
-        <!-- ── Card 3: Family / 12 Months ── -->
         <article class="pricing-card pricing-card--white" role="listitem" aria-label="Family Membership, 12 Months, R650 per month">
           <div class="pricing-card__body">
-            <i class="fa-solid fa-users pricing-card__icon" aria-hidden="true"></i>
-            <h2 class="pricing-card__name">Family Membership</h2>
-            <p class="pricing-card__length">12 Months</p>
-            <p class="pricing-card__price">R650</p>
-            <p class="pricing-card__per">Per Month</p>
+            <i class="fa-solid fa-users pricing-card__icon pricing-card__icon--dark" aria-hidden="true"></i>
+            <h2 class="pricing-card__name pricing-card__name--dark">Family Membership</h2>
+            <p class="pricing-card__length pricing-card__length--dark">12 Months</p>
+            <p class="pricing-card__price pricing-card__price--dark">R650</p>
+            <p class="pricing-card__per pricing-card__per--dark">Per Month</p>
           </div>
         </article>
 
-        <!-- ── Card 4: Trial / 1 Month ── -->
         <article class="pricing-card pricing-card--deep" role="listitem" aria-label="Trial Membership, 1 Month, R635 per month">
           <div class="pricing-card__body">
             <i class="fa-solid fa-key pricing-card__icon" aria-hidden="true"></i>
@@ -227,9 +197,8 @@
           </div>
         </article>
 
-      </div><!-- /grid -->
+      </div>
 
-      <!-- CTA -->
       <div class="pricing__cta-wrap">
         <a href="#" class="pricing__cta" aria-label="View full pricing details">
           View Full Pricing
@@ -237,8 +206,69 @@
         </a>
       </div>
 
-    </div><!-- /inner -->
+    </div>
   </section><!-- /pricing -->
+
+
+  <!-- ============================================
+       GALLERY SECTION
+  ============================================= -->
+  <section class="gallery" id="gallery" aria-label="Gym photo gallery">
+    <div class="gallery__inner">
+
+      <!-- Header -->
+      <header class="gallery__header">
+        <h2 class="gallery__title">GALLERY</h2>
+        <p class="gallery__subtitle">Take a look inside</p>
+      </header>
+
+      <!-- Fanned deck — desktop -->
+      <div class="deck" role="list" aria-label="Gallery photo deck">
+
+        <article class="card card--1" role="listitem" aria-label="Gallery photo 1">
+          <img src="images/GalleryImages/gym_image1.jpg"  alt="Gym photo 1"  loading="lazy" />
+        </article>
+        <article class="card card--2" role="listitem" aria-label="Gallery photo 2">
+          <img src="images/GalleryImages/gym_image2.jpg"  alt="Gym photo 2"  loading="lazy" />
+        </article>
+        <article class="card card--3" role="listitem" aria-label="Gallery photo 3">
+          <img src="images/GalleryImages/gym_image3.jpg"  alt="Gym photo 3"  loading="lazy" />
+        </article>
+        <article class="card card--4" role="listitem" aria-label="Gallery photo 4">
+          <img src="images/GalleryImages/gym_image4.jpg"  alt="Gym photo 4"  loading="lazy" />
+        </article>
+        <article class="card card--5" role="listitem" aria-label="Gallery photo 5">
+          <img src="images/GalleryImages/gym_image5.jpg"  alt="Gym photo 5"  loading="lazy" />
+        </article>
+        <article class="card card--6" role="listitem" aria-label="Gallery photo 6">
+          <img src="images/GalleryImages/gym_image6.jpg"  alt="Gym photo 6"  loading="lazy" />
+        </article>
+        <article class="card card--7" role="listitem" aria-label="Gallery photo 7">
+          <img src="images/GalleryImages/gym_image7.jpg"  alt="Gym photo 7"  loading="lazy" />
+        </article>
+        <article class="card card--8" role="listitem" aria-label="Gallery photo 8">
+          <img src="images/GalleryImages/gym_image8.jpg"  alt="Gym photo 8"  loading="lazy" />
+        </article>
+        <article class="card card--9" role="listitem" aria-label="Gallery photo 9">
+          <img src="images/GalleryImages/gym_image9.jpg"  alt="Gym photo 9"  loading="lazy" />
+        </article>
+        <article class="card card--10" role="listitem" aria-label="Gallery photo 10">
+          <img src="images/GalleryImages/gym_image10.jpg" alt="Gym photo 10" loading="lazy" />
+        </article>
+        <article class="card card--11" role="listitem" aria-label="Gallery photo 11">
+          <img src="images/GalleryImages/gym_image11.jpg" alt="Gym photo 11" loading="lazy" />
+        </article>
+        <article class="card card--12" role="listitem" aria-label="Gallery photo 12">
+          <img src="images/GalleryImages/gym_image12.jpg" alt="Gym photo 12" loading="lazy" />
+        </article>
+        <article class="card card--13" role="listitem" aria-label="Gallery photo 13">
+          <img src="images/GalleryImages/gym_image13.jpg" alt="Gym photo 13" loading="lazy" />
+        </article>
+
+      </div><!-- /deck -->
+
+    </div><!-- /gallery__inner -->
+  </section><!-- /gallery -->
 
 
   <!-- ============================================
