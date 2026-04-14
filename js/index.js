@@ -203,6 +203,46 @@
     });
 
     /* ────────────────────────────────────────────
+       ACTIVE NAV LINK ON SCROLL
+    ─────────────────────────────────────────────*/
+    function setActiveNavLink(sectionId) {
+      document.querySelectorAll('.nav__link, .nav__drawer-link').forEach(link => {
+        const isActive = link.getAttribute('href') === `#${sectionId}`;
+        if (isActive) {
+          link.setAttribute('aria-current', 'page');
+        } else {
+          link.removeAttribute('aria-current');
+        }
+      });
+    }
+
+    const sections = ['hero', 'pricing', 'gallery', 'success', 'contact']
+      .map(id => document.getElementById(id))
+      .filter(Boolean);
+
+    if (sections.length) {
+      const sectionObserver = new IntersectionObserver(
+        (entries) => {
+          const visible = entries
+            .filter(entry => entry.isIntersecting)
+            .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+          if (visible.length) {
+            setActiveNavLink(visible[0].target.id);
+          }
+        },
+        {
+          root: null,
+          rootMargin: '-35% 0px -45% 0px',
+          threshold: [0.2, 0.35, 0.5, 0.7]
+        }
+      );
+
+      sections.forEach(section => sectionObserver.observe(section));
+      setActiveNavLink('hero');
+    }
+
+    /* ────────────────────────────────────────────
        INIT
     ─────────────────────────────────────────────*/
     buildSlider();

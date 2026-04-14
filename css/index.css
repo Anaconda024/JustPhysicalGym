@@ -52,7 +52,7 @@
     }
 
     .nav__logo img {
-      height: 40px;
+      height: 100px;
       max-width: 200px;
       object-fit: contain;
       display: block;
@@ -717,10 +717,19 @@
       pointer-events: none;
       z-index: 0;
     }
-    .pricing-card--dark::before  { background: rgba(0, 0, 0, 0.40); }
-    .pricing-card--blue::before  { background: rgba(28, 163, 253, 0.85); }
-    .pricing-card--white::before { background: rgba(255, 255, 255, 0.90); }
-    .pricing-card--deep::before  { background: rgba(17, 97, 151, 0.85); }
+    .pricing-card--dark::before  { background: rgba(0, 0, 0, 0.40); }.pricing-card--blue::before  { background-image: 
+      linear-gradient(rgba(28, 163, 253, 0.4), rgba(28, 163, 253, 0.4)), /* The Tint */
+      url('../images/backgrounds/rust_background.jpg');}
+
+  /* Card 3 — white */
+  .pricing-card--white::before { background-image: 
+      linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), /* The Tint */
+      url('../images/backgrounds/rust_background.jpg');}
+
+  /* Card 4 — deep navy */
+  .pricing-card--deep::before  { background-image: 
+      linear-gradient(rgba(17, 97, 151, 0.4), rgba(17, 97, 151, 0.4)), /* The Tint */
+      url('../images/backgrounds/rust_background.jpg');}
     .pricing-card__body {
       position: relative;
       z-index: 1;
@@ -896,7 +905,7 @@
     ══════════════════════════════════════════ */
     .deck {
       position: relative;
-      height: 480px;
+      height: 510px;
       /* Wide enough to let the rightmost card fully show */
       margin: 0 auto;
     }
@@ -905,8 +914,8 @@
     .card {
       position: absolute;
       bottom: 0;
-      width: 330px;
-      height: 450px;
+      width: 360px;
+      height: 490px;
       border-radius: 12px;
       overflow: hidden;
       box-shadow: 0 8px 28px rgba(0, 0, 0, 0.55);
@@ -942,68 +951,68 @@
 
     /* n = 0 */
     .card--1  {
-      left: calc(50% - 338px + (0  * 52px));
+      left: calc(50% - 390px + (0  * 60px));
       z-index: 1;
     }
     /* n = 1 */
     .card--2  {
-      left: calc(50% - 338px + (1  * 52px));
+      left: calc(50% - 390px + (1  * 60px));
       z-index: 2;
     }
     /* n = 2 */
     .card--3  {
-      left: calc(50% - 338px + (2  * 52px));
+      left: calc(50% - 390px + (2  * 60px));
       z-index: 3;
     }
     /* n = 3 */
     .card--4  {
-      left: calc(50% - 338px + (3  * 52px));
+      left: calc(50% - 390px + (3  * 60px));
       z-index: 4;
     }
     /* n = 4 */
     .card--5  {
-      left: calc(50% - 338px + (4  * 52px));
+      left: calc(50% - 390px + (4  * 60px));
       z-index: 5;
     }
     /* n = 5 */
     .card--6  {
-      left: calc(50% - 338px + (5  * 52px));
+      left: calc(50% - 390px + (5  * 60px));
       z-index: 6;
     }
     /* n = 6 — centre card, no rotation */
     .card--7  {
-      left: calc(50% - 338px + (6  * 52px));
+      left: calc(50% - 390px + (6  * 60px));
       transform: rotate(0deg);
       z-index: 7;
     }
     /* n = 7 */
     .card--8  {
-      left: calc(50% - 338px + (7  * 52px));
+      left: calc(50% - 390px + (7  * 60px));
       z-index: 8;
     }
     /* n = 8 */
     .card--9  {
-      left: calc(50% - 338px + (8  * 52px));
+      left: calc(50% - 390px + (8  * 60px));
       z-index: 9;
     }
     /* n = 9 */
     .card--10 {
-      left: calc(50% - 338px + (9  * 52px));
+      left: calc(50% - 390px + (9  * 60px));
       z-index: 10;
     }
     /* n = 10 */
     .card--11 {
-      left: calc(50% - 338px + (10 * 52px));
+      left: calc(50% - 390px + (10 * 60px));
       z-index: 11;
     }
     /* n = 11 */
     .card--12 {
-      left: calc(50% - 338px + (11 * 52px));
+      left: calc(50% - 390px + (11 * 60px));
       z-index: 12;
     }
     /* n = 12 — far right, fully visible */
     .card--13 {
-      left: calc(50% - 338px + (12 * 52px));
+      left: calc(50% - 390px + (12 * 60px));
       z-index: 13;
     }
 
@@ -1088,5 +1097,103 @@
       .card--9, .card--10, .card--11, .card--12, .card--13 {
         width: 263px;
         height: 360px;
+      }
+    }
+
+    /* ==============================================
+       CONTACT + FOOTER SECTION
+    =============================================== */
+    .contact {
+      background: #000000;
+      padding: 60px 5% 40px 5%;
+      text-align: center;
+    }
+
+    .map-wrapper {
+      width: 90%;
+      max-width: 1200px;
+      height: 400px;
+      margin: 0 auto;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+    }
+
+    .map-wrapper iframe {
+      width: 100%;
+      height: 100%;
+      border: none;
+      display: block;
+      filter: grayscale(100%) contrast(1.1);
+    }
+
+    .contact__cta {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 32px;
+      border-radius: 8px;
+      background: #1CA3FD;
+      color: #ffffff;
+      text-decoration: none;
+      padding: 14px 28px;
+      font-family: var(--font-body);
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      transition: all 0.2s ease;
+    }
+
+    .contact__cta:hover {
+      transform: scale(1.03);
+      filter: brightness(1.1);
+    }
+
+    .contact__social {
+      margin-top: 40px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 24px;
+    }
+
+    .contact__social a {
+      color: #ffffff;
+      opacity: 0.85;
+      line-height: 1;
+      transition: opacity 0.2s ease, transform 0.2s ease;
+    }
+
+    .contact__social a:hover {
+      opacity: 1;
+      transform: translateY(-2px);
+    }
+
+    .contact__social i {
+      width: 28px;
+      height: 28px;
+      font-size: 28px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      filter: grayscale(1);
+    }
+
+    .contact__footer {
+      margin-top: 24px;
+      font-family: var(--font-body);
+      font-size: 12px;
+      color: #aaaaaa;
+      letter-spacing: 0.02em;
+    }
+
+    .contact__footer span {
+      color: #ffffff;
+      font-weight: 600;
+    }
+
+    @media (max-width: 600px) {
+      .map-wrapper {
+        height: 280px;
       }
     }
