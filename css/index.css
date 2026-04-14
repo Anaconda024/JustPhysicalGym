@@ -685,7 +685,7 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      background-image: url('images/backgrounds/rust_background.jpg');
+      background-image: url('../images/backgrounds/rust_background.jpg');
       background-size: cover;
       background-position: center;
       opacity: 0;
