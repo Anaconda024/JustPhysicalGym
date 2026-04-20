@@ -719,17 +719,17 @@
     }
     .pricing-card--dark::before  { background: rgba(0, 0, 0, 0.40); }.pricing-card--blue::before  { background-image: 
       linear-gradient(rgba(28, 163, 253, 0.4), rgba(28, 163, 253, 0.4)), /* The Tint */
-      url('../images/backgrounds/rust_background.jpg');}
+      url('../images/Backgrounds/rust_background.jpg');}
 
   /* Card 3 — white */
   .pricing-card--white::before { background-image: 
       linear-gradient(rgba(255, 255, 255, 0.2), rgba(255, 255, 255, 0.2)), /* The Tint */
-      url('../images/backgrounds/rust_background.jpg');}
+      url('../images/Backgrounds/rust_background.jpg');}
 
   /* Card 4 — deep navy */
   .pricing-card--deep::before  { background-image: 
       linear-gradient(rgba(17, 97, 151, 0.4), rgba(17, 97, 151, 0.4)), /* The Tint */
-      url('../images/backgrounds/rust_background.jpg');}
+      url('../images/Backgrounds/rust_background.jpg');}
     .pricing-card__body {
       position: relative;
       z-index: 1;
